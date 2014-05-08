@@ -1,7 +1,7 @@
 package com.ahacool.designpattern.factorymethod.test;
 
+import com.ahacool.designpattern.factorymethod.SimpleFactory;
 import com.ahacool.designpattern.factorymethod.model.Car;
-import com.ahacool.designpattern.factorymethod.simple.SimpleFactory;
 
 /**
  * @ClassName SimpleFactoryTest
