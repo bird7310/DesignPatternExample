@@ -14,9 +14,9 @@ import com.ahacool.designpattern.abstractfactory.dao.IUserDAO;
  */
 public class AbstractFactoryTest {
 	public static void main(String[] args) {
+		// Choose different database here.
 //		ICreateDataBaseFactory factory = new SqlFactory();
 		ICreateDataBaseFactory factory = new MysqlFactory();
-
 		IUserDAO userDAO = factory.createDatabaseUser();
 		userDAO.insert();
 		userDAO.getUserName();
