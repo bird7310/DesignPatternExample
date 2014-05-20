@@ -4,7 +4,7 @@ import com.ahacool.designpattern.builder.model.Roboter;
 
 /**
  * @ClassName Director
- * @Description TODO
+ * @Description Define the build order. 
  * @author Moto
  * @date 2014 2014-5-20
  * 

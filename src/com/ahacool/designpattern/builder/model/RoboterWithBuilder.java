@@ -2,7 +2,7 @@ package com.ahacool.designpattern.builder.model;
 
 /**
  * @ClassName RoboterWithBuilder
- * @Description TODO
+ * @Description A product with builder inside.
  * @author Moto
  * @date 2014 2014-5-20
  * 
@@ -12,16 +12,29 @@ public class RoboterWithBuilder {
 	private String mArm;
 	private String mBody;
 	private String mFoot;
-	private String mWing;
-	private String mTools;
+
+	public String getmHead() {
+		return mHead;
+	}
+
+	public String getmArm() {
+		return mArm;
+	}
+
+	public String getmBody() {
+		return mBody;
+	}
+
+	public String getmFoot() {
+		return mFoot;
+	}
+	
 
 	private RoboterWithBuilder(Builder pBuilder) {
 		mHead = pBuilder.mBuilderHead;
 		mBody = pBuilder.mBuilderBody;
 		mArm = pBuilder.mBuilderArm;
 		mFoot = pBuilder.mBuilderFoot;
-		mWing = pBuilder.mBuilderWing;
-		mTools = pBuilder.mBuilderTools;
 	}
 
 	public static class Builder {
@@ -29,8 +42,6 @@ public class RoboterWithBuilder {
 		private String mBuilderArm;
 		private String mBuilderBody;
 		private String mBuilderFoot;
-		private String mBuilderWing;
-		private String mBuilderTools;
 
 		public Builder setmBuilderHead(String mBuilderHead) {
 			this.mBuilderHead = mBuilderHead;
@@ -49,16 +60,6 @@ public class RoboterWithBuilder {
 
 		public Builder setmBuilderFoot(String mBuilderFoot) {
 			this.mBuilderFoot = mBuilderFoot;
-			return this;
-		}
-
-		public Builder setmBuilderWing(String mBuilderWing) {
-			this.mBuilderWing = mBuilderWing;
-			return this;
-		}
-
-		public Builder setmBuilderTools(String mBuilderTools) {
-			this.mBuilderTools = mBuilderTools;
 			return this;
 		}
 

@@ -4,7 +4,7 @@ import com.ahacool.designpattern.builder.model.Roboter;
 
 /**
  * @ClassName Builder
- * @Description TODO
+ * @Description Define build interface.
  * @author Moto
  * @date 2014 2014-5-15
  * 

@@ -2,7 +2,7 @@ package com.ahacool.designpattern.builder.model;
 
 /**
  * @ClassName Roboter
- * @Description TODO
+ * @Description A common product.
  * @author Moto
  * @date 2014 2014-5-20
  * 

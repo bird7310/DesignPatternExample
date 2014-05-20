@@ -4,7 +4,7 @@ import com.ahacool.designpattern.builder.model.Roboter;
 
 /**
  * @ClassName ConcreteBuilder
- * @Description TODO
+ * @Description Concrete builder.
  * @author Moto
  * @date 2014 2014-5-20
  * 
