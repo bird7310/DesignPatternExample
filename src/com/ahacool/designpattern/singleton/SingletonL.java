@@ -28,4 +28,8 @@ public class SingletonL {
 	public Object readResolve() {
 		return getInstance();
 	}
+
+	public void print() {
+		System.out.println("懒汉式");
+	}
 }
