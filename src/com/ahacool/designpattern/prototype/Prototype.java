@@ -4,7 +4,7 @@ package com.ahacool.designpattern.prototype;
  * @ClassName Prototype
  * @Description TODO
  * @author Moto
- * @date 2014 2014-6-6
+ * @date 2014 2014-9-6
  * 
  */
 public class Prototype implements Cloneable {
