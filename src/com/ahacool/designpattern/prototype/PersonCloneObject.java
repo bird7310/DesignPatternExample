@@ -1,31 +1,31 @@
 package com.ahacool.designpattern.prototype;
 
 /**
- * @ClassName Person
- * @Description It can only clone value.
+ * @ClassName PersonCloneObject
+ * @Description It can clone the object, deep clone.
  * @author Moto
  * @date 2014 2014-9-6
  * 
  */
-public class Person implements Prototype {
+public class PersonCloneObject implements Prototype {
 
 	public String mName;
 	public String mMajor;
 	public Score mScore;
 
-	public Person(Score pScore) {
+	public PersonCloneObject(Score pScore) {
 		mName = "张三";
 		mMajor = "IT";
-		mScore = pScore;
+		mScore = (Score) pScore.clone();
 	}
 
 	public Object clone() {
-		Prototype Prototype = new Person(mScore);
-		return Prototype;
+		Prototype prototype = new PersonCloneObject(mScore);
+		return prototype;
 	}
 
 	public void printValue(String pName) {
-		System.out.println(pName+":");
+		System.out.println(pName + ":");
 		System.out.println("id=" + this + "  mName=" + mName + "  mMajor=" + mMajor);
 		System.out.println("mScore=" + mScore + "  mChinese=" + mScore.mChinese);
 	}
