@@ -18,19 +18,19 @@ public class PrototypeTest {
 		// Shallow Copy
 		Score score = new Score();
 		Person person = new Person(score);
-		person.printValue("person");
-
-		Person person2 = (Person) person.clone();
-		person2.printValue("person2");
+		Person person2 = (Person) person.clone();	//原型拷贝
 		Person person3 = person;
+		
+		person.printValue("person");
+		person2.printValue("person2");
 		person3.printValue("person3");
-
 		System.out.println("--------");
 
 		// Deep Copy
 		PersonCloneObject personCloneObject = new PersonCloneObject(score);
-		personCloneObject.printValue("personCloneObject");
 		PersonCloneObject personCloneObject2 = (PersonCloneObject) personCloneObject.clone();
+		
+		personCloneObject.printValue("personCloneObject");
 		personCloneObject2.printValue("personCloneObject2");
 	}
 
