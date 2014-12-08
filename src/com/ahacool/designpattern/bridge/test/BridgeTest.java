@@ -1,9 +1,9 @@
 package com.ahacool.designpattern.bridge.test;
 
 import com.ahacool.designpattern.bridge.ITV;
-import com.ahacool.designpattern.bridge.LGRC;
-import com.ahacool.designpattern.bridge.LGTV;
-import com.ahacool.designpattern.bridge.SamSungRC;
+import com.ahacool.designpattern.bridge.IRRC;
+import com.ahacool.designpattern.bridge.SonyTV;
+import com.ahacool.designpattern.bridge.BluetoothRC;
 import com.ahacool.designpattern.bridge.SamSungTV;
 
 /**
@@ -14,16 +14,13 @@ import com.ahacool.designpattern.bridge.SamSungTV;
  * 
  */
 public class BridgeTest {
-	//不同的遥控器控制不同的电视
-
 	public static void main(String[] args) {
 		ITV samsumgTV = new SamSungTV();
-		SamSungRC samsumgRC = new SamSungRC(samsumgTV);
-		samsumgRC.powerOn();
-
-		ITV lgTV = new LGTV();
-		LGRC lgRC = new LGRC(lgTV);
-		lgRC.powerOn();
+		
+		BluetoothRC bluetoothRC = new BluetoothRC(samsumgTV);
+		bluetoothRC.powerOn();
+		
+		IRRC irRC = new IRRC(samsumgTV);
+		irRC.powerOn();
 	}
-
 }

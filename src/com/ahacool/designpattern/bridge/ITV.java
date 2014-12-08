@@ -9,6 +9,4 @@ package com.ahacool.designpattern.bridge;
  */
 public interface ITV {
 	public void powerOn();
-
-	public void powerOff();
 }

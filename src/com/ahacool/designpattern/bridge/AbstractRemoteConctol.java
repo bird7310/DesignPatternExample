@@ -8,7 +8,6 @@ package com.ahacool.designpattern.bridge;
  * 
  */
 public abstract class AbstractRemoteConctol {
-
 	private ITV mTV;
 
 	public AbstractRemoteConctol(ITV pTV) {
@@ -18,9 +17,4 @@ public abstract class AbstractRemoteConctol {
 	public void powerOnTV() {
 		mTV.powerOn();
 	}
-
-	public void powerOffTV() {
-		mTV.powerOff();
-	}
-
 }

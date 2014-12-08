@@ -1,20 +1,15 @@
 package com.ahacool.designpattern.bridge;
 
 /**
- * @ClassName LGRC
+ * @ClassName SonyTV
  * @Description TODO
  * @author Moto
  * @date 2014 2014-11-12
  * 
  */
-public class LGRC extends AbstractRemoteConctol {
-
-	public LGRC(ITV pTV) {
-		super(pTV);
-	}
-
+public class SonyTV implements ITV {
+	@Override
 	public void powerOn() {
-		powerOnTV();
+		System.out.println("Sony TV 已经启动。");
 	}
-
 }

@@ -8,15 +8,8 @@ package com.ahacool.designpattern.bridge;
  * 
  */
 public class SamSungTV implements ITV {
-
 	@Override
 	public void powerOn() {
 		System.out.println("Samsung TV 已经启动。");
 	}
-
-	@Override
-	public void powerOff() {
-		System.out.println("Samsung TV 已经关闭。");
-	}
-
 }
