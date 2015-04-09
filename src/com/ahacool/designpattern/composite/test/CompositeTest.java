@@ -11,8 +11,8 @@ import com.ahacool.designpattern.composite.Leaf;
  * 
  */
 public class CompositeTest {
-	//类似二叉树这样的结构
-	
+	// 类似二叉树这样的结构
+
 	public static void main(String[] args) {
 		Composite composite1 = new Composite("节点1");
 		Composite composite2 = new Composite("节点2");
@@ -24,10 +24,10 @@ public class CompositeTest {
 
 		composite1.add(leaf1);
 		composite1.add(leaf2);
+		composite1.add(composite2);
 		composite2.add(leaf3);
 		composite2.add(leaf4);
 		composite2.add(leaf5);
-		composite1.add(composite2);
 
 		composite1.show();
 	}

@@ -10,14 +10,28 @@ package com.ahacool.designpattern.composite;
 public class Leaf implements Component {
 
 	private String mName;
+	private int mLevel;
 
 	public Leaf(String pName) {
 		mName = pName;
+		mLevel = 0;
 	}
 
 	@Override
 	public void show() {
-		System.out.println("我是" + mName);
+		showLevel();
+	}
+
+	@Override
+	public void isChild(int pFatherLevel) {
+		mLevel = pFatherLevel + 1;
+	}
+
+	private void showLevel() {
+		for (int i = 0; i < mLevel; i++) {
+			System.out.print("-");
+		}
+		System.out.println(mName);
 	}
 
 }

@@ -12,13 +12,16 @@ import java.util.ArrayList;
 public class Composite implements Component {
 
 	private String mName;
+	private int mLevel;
 	private ArrayList<Component> mList = new ArrayList<Component>();
 
 	public Composite(String pName) {
 		mName = pName;
+		mLevel = 0;
 	}
 
 	public void add(Component pComponent) {
+		pComponent.isChild(mLevel);
 		mList.add(pComponent);
 	}
 
@@ -28,10 +31,22 @@ public class Composite implements Component {
 
 	@Override
 	public void show() {
-		System.out.println("我是" + mName);
+		showLevel();
 		for (Component component : mList) {
 			component.show();
 		}
+	}
+
+	@Override
+	public void isChild(int pFatherLevel) {
+		mLevel = pFatherLevel + 1;
+	}
+
+	private void showLevel() {
+		for (int i = 0; i < mLevel; i++) {
+			System.out.print("-");
+		}
+		System.out.println(mName);
 	}
 
 }

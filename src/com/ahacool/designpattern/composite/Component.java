@@ -1,4 +1,5 @@
 package com.ahacool.designpattern.composite;
+
 /**
  * @ClassName Component
  * @Description TODO
@@ -7,7 +8,9 @@ package com.ahacool.designpattern.composite;
  * 
  */
 public interface Component {
-	
+
 	public void show();
+
+	public void isChild(int pFatherLevel);
 
 }
